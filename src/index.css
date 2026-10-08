@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Noto+Serif+Bengali:wght@400;500&display=swap");
+@import "tailwindcss";
+
+:root {
+  --ivory: #f7f2e8;
+  --paper: #eee6d7;
+  --ink: #201d19;
+  --muted: #746d63;
+  --line: #d5cab8;
+  --red: #9e2521;
+  --marigold: #f4b52e;
+  --green: #173c30;
+  font-family: "DM Sans", sans-serif;
+  font-synthesis: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--ivory);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+.font-serif {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.font-bengali {
+  font-family: "Noto Serif Bengali", serif;
+}
+
+.nav-link {
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 180ms ease;
+}
+
+.nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform 180ms ease;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--red);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  width: 2rem;
+  height: 1px;
+  content: "";
+  background: currentColor;
+}
+
+.decorative-flower {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18rem;
+  line-height: 1;
+}
+
+.collection-card {
+  min-height: 330px;
+  background: #d6c9b4;
+}
+
+.collection-card::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: inset 250ms ease, border-color 250ms ease;
+}
+
+.collection-card:hover::after {
+  inset: 0.75rem;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

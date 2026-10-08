@@ -1,0 +1,10 @@
+{
+  "description": "Showcases Indian Bengali wedding decor and crafts with a curated gallery and design ideas for couples and event planners seeking cultural inspiration.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
